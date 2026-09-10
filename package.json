@@ -1,0 +1,135 @@
+{
+  "name": "@sendai/monquery",
+  "version": "0.1.0",
+  "description": "Readable URL filter grammar (OData-style) with schema-driven validation, MongoDB compilation and keyset pagination. One package, browser-safe core, opt-in server entry points.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/send-ai/monquery"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./client": {
+      "import": {
+        "types": "./dist/client/index.d.ts",
+        "default": "./dist/client/index.js"
+      },
+      "require": {
+        "types": "./dist/client/index.d.cts",
+        "default": "./dist/client/index.cjs"
+      }
+    },
+    "./mongo": {
+      "import": {
+        "types": "./dist/mongo/index.d.ts",
+        "default": "./dist/mongo/index.js"
+      },
+      "require": {
+        "types": "./dist/mongo/index.d.cts",
+        "default": "./dist/mongo/index.cjs"
+      }
+    },
+    "./express": {
+      "import": {
+        "types": "./dist/express/index.d.ts",
+        "default": "./dist/express/index.js"
+      },
+      "require": {
+        "types": "./dist/express/index.d.cts",
+        "default": "./dist/express/index.cjs"
+      }
+    },
+    "./typegoose": {
+      "import": {
+        "types": "./dist/typegoose/index.d.ts",
+        "default": "./dist/typegoose/index.js"
+      },
+      "require": {
+        "types": "./dist/typegoose/index.d.cts",
+        "default": "./dist/typegoose/index.cjs"
+      }
+    },
+    "./zod": {
+      "import": {
+        "types": "./dist/zod/index.d.ts",
+        "default": "./dist/zod/index.js"
+      },
+      "require": {
+        "types": "./dist/zod/index.d.cts",
+        "default": "./dist/zod/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsup",
+    "check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "pnpm check && pnpm test && pnpm build"
+  },
+  "peerDependencies": {
+    "@typegoose/typegoose": ">=12",
+    "mongodb": ">=5",
+    "reflect-metadata": ">=0.1.13",
+    "zod": ">=3.23"
+  },
+  "peerDependenciesMeta": {
+    "@typegoose/typegoose": {
+      "optional": true
+    },
+    "mongodb": {
+      "optional": true
+    },
+    "reflect-metadata": {
+      "optional": true
+    },
+    "zod": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.19",
+    "@typegoose/typegoose": "^13.3.0",
+    "mongodb": "^6.20.0",
+    "mongoose": "^9.6.2",
+    "reflect-metadata": "^0.2.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.7",
+    "zod": "^4.4.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "odata",
+    "filter",
+    "query",
+    "url",
+    "mongodb",
+    "mongoose",
+    "typegoose",
+    "pagination",
+    "keyset",
+    "cursor"
+  ]
+}
