@@ -7,6 +7,7 @@ export default defineConfig({
     "mongo/index": "src/mongo/index.ts",
     "express/index": "src/express/index.ts",
     "typegoose/index": "src/typegoose/index.ts",
+    "mongoose/index": "src/mongoose/index.ts",
     "zod/index": "src/zod/index.ts",
   },
   format: ["esm", "cjs"],

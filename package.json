@@ -1,6 +1,6 @@
 {
   "name": "@sendai/monquery",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Readable URL filter grammar (OData-style) with schema-driven validation, MongoDB compilation and keyset pagination. One package, browser-safe core, opt-in server entry points.",
   "license": "MIT",
   "repository": {
@@ -69,6 +69,16 @@
       "require": {
         "types": "./dist/typegoose/index.d.cts",
         "default": "./dist/typegoose/index.cjs"
+      }
+    },
+    "./mongoose": {
+      "import": {
+        "types": "./dist/mongoose/index.d.ts",
+        "default": "./dist/mongoose/index.js"
+      },
+      "require": {
+        "types": "./dist/mongoose/index.d.cts",
+        "default": "./dist/mongoose/index.cjs"
       }
     },
     "./zod": {
