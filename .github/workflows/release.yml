@@ -32,4 +32,6 @@ jobs:
       - run: pnpm check
       - run: pnpm test
       - run: pnpm build
+      # Trusted publishing (OIDC) needs npm 11.5.1 or later; Node 22 ships npm 10
+      - run: npm install -g npm@^11.5.1
       - run: npm publish --provenance --access public
