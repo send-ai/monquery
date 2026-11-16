@@ -126,13 +126,13 @@
     "mongodb": "^6.20.0",
     "mongoose": "^9.6.2",
     "reflect-metadata": "^0.2.2",
-    "tsup": "^8.5.0",
-    "typescript": "^5.9.3",
+    "tsup": "^9.0.0",
+    "typescript": "^6.0.3",
     "vitest": "^4.1.7",
     "zod": "^4.4.3"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22.18"
   },
   "keywords": [
     "odata",
